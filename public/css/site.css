@@ -1,0 +1,91 @@
+/* site.css */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+html * {
+    font-family: 'Rubik', sans-serif;
+    color: #c7c9d2;
+}
+body {
+    background-color: #202225;
+}
+nav {
+    border: none !important;
+}
+.container-fluid {
+    background-color: #17171c;
+}
+
+.nav > li {
+    border-radius: 5px;
+    background-color: #25252d;
+    margin: 5px;
+
+}
+
+.nav > li > a {
+    color: #76768f !important;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.nav > li.active > a {
+    border-radius: 5px;
+    background-color: #565669 !important;
+    color: #d3d3ff !important;
+}
+
+.nav > li:hover {
+    background-color: #3b3b43;
+}
+.nav > li:hover > a {
+    color: #d3d3ff !important;
+}
+.navbar-brand {color: #c3c2c2 !important;}
+.navbar-brand:hover {
+    cursor: pointer;
+}
+
+div.container {
+    background-color: #37393E;
+    border-radius: 5px;
+}
+aside {
+    background-color: #2F3136;
+    border-radius: 5px;
+}
+
+form label {
+    font-weight: 500;
+    color: #DCDDDE !important;
+}
+
+input {
+    background-color: #40444B !important;
+    border-radius: 10px !important;
+    border: none !important;
+    color: #DCDDDE !important;
+}
+
+input[type="submit"], button {
+    border-radius: 5px;
+    background-color: #636770 !important;
+    font-weight: 400;
+}
+
+input[type="submit"]:hover, button {
+    background-color: #797d88 !important;
+}
+
+img {
+    border-radius: 10px !important;
+    background-color: #57585a!important;
+    border: none !important;
+}
+
+hr, th, td, tr {
+    border: 1px solid #6b6b6b;
+}
+
+thead > tr > th {
+    font-weight: 500;
+    border-bottom: 2px solid #6b6b6b !important;
+}
