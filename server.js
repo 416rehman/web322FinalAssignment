@@ -17,7 +17,6 @@ const fs = require("fs");
 const multer = require("multer");
 const exphbs = require('express-handlebars')
 const app = express();
-
 let hbs = exphbs.create({
     defaultLayout: 'main',
     extname: '.hbs',
