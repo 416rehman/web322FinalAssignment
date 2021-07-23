@@ -1,6 +1,11 @@
 <div class="row">
+    {{log this.employees}}
     <div class="col-md-12">
-        <h2>Employees</h2>
+        <h2>
+            Employees
+            <a href="/employees/add" class="btn btn-success pull-right">Add New Employee</a>
+        </h2>
+
         <hr />
         <div class="table-responsive">
             <table class="table">
@@ -19,17 +24,18 @@
                 </thead>
                 {{#each employees}}
                     <tr>
-                        <td>{{this.employeeNum}}</td>
-                        <td><a href="/employee/{{this.employeeNum}}">{{this.firstName}} {{this.lastName}}</a></td>
-                        <td><a href="mailto:{{this.email}}">{{this.email}}</a></td>
-                        <td>{{this.addressStreet}} {{this.addressCity}} {{this.addressState}} {{addressPostal}}</td>
-                        <td><a href='/employees?manager={{this.employeeManagerNum}}'>{{this.employeeManagerNum}}</a></td>
-                        <td><a href=' /employees?status={{#equal this.status "Full Time"}}Full Time{{/equal}}{{#equal this.status "Part Time"}}Part Time{{/equal}}'>
-                                {{this.status}}
+                        <td>{{this.dataValues.employeeNum}}</td>
+                        <td><a href="/employee/{{this.dataValues.employeeNum}}">{{this.dataValues.firstName}} {{this.dataValues.lastName}}</a></td>
+                        <td><a href="mailto:{{this.dataValues.email}}">{{this.dataValues.email}}</a></td>
+                        <td>{{this.dataValues.addressStreet}} {{this.dataValues.addressCity}} {{this.dataValues.addressState}} {{dataValues.addressPostal}}</td>
+                        <td><a href='/employees?manager={{this.dataValues.employeeManagerNum}}'>{{this.dataValues.employeeManagerNum}}</a></td>
+                        <td><a href=' /employees?status={{#equal this.dataValues.status "Full Time"}}Full Time{{/equal}}{{#equal this.dataValues.status "Part Time"}}Part Time{{/equal}}'>
+                                {{this.dataValues.status}}
                             </a>
                         </td>
-                        <td><a href='/employees?department={{this.department}}'>{{this.department}}</a></td>
-                        <td>{{this.hireDate}}</td>
+                        <td><a href='/employees?department={{this.dataValues.department}}'>{{this.dataValues.department}}</a></td>
+                        <td>{{this.dataValues.hireDate}}</td>
+                        <td><a href="/employees/delete/{{this.dataValues.employeeNum}}" class="btn btn-danger">remove</a></td>
                     </tr>
                 {{/each}}
             </table>
