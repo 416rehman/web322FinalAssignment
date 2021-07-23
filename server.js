@@ -203,17 +203,17 @@ app.post("/departments/add", (req, res) => {
     });;
 });
 
-app.post("/departments/update", (req, res) => {
+app.post("/department/update", (req, res) => {
     data.updateDepartment(req.body).then(()=>{
-        res.redirect("/deparments");
+        res.redirect("/departments");
     }).catch((err)=>{
         res.status(500).send("Unable to Update Department");
     });
 });
 
-app.get("/departments/:departmentId", (req, res) => {
+app.get("/department/:departmentId", (req, res) => {
     data.getDepartmentById(req.params.departmentId).then((data) => {
-        data.length > 0 ? res.render('department', {department: data})
+        data ? res.render('department', {department: data})
         : res.status(404).send("Department Not Found");
     }).catch(() => {
         res.status(404).send("Department Not Found");

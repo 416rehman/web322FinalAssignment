@@ -15,7 +15,7 @@
                 </thead>
                 {{#each departments}}
                     <tr>
-                        <td><a href="/employee?department={{this.dataValues.departmentId}}">{{this.dataValues.departmentId}}</a></td>
+                        <td><a href="/employees?department={{this.dataValues.departmentId}}">{{this.dataValues.departmentId}}</a></td>
                         <td><a href="/department/{{this.dataValues.departmentId}}">{{this.dataValues.departmentName}}</a></td>
                         <td><a href="/departments/delete/{{this.dataValues.departmentId}}" class="btn btn-danger">remove</a></td>
                     </tr>
