@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV == 'development') require('dotenv').config()
+if (process.env.NODE_ENV != 'production') require('dotenv').config()
 const Sequelize = require('sequelize')
 
 var sequelize = new Sequelize(process.env.DB_Database, process.env.DB_User, process.env.DB_Password, {
