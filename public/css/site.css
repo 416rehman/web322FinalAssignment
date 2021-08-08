@@ -99,3 +99,12 @@ thead > tr > th {
 a {
     color: mediumspringgreen;
 }
+
+.alertdanger {
+    background-color: #883e3e;
+}
+
+.alert-success {
+    background-color: #3e884c;
+    color: white;
+}
